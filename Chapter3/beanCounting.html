@@ -1,0 +1,18 @@
+<html>
+<script>
+
+function countChar(str, letter) {
+   var numChars = 0;
+   for (var i = 0; i < str.length; i++) {
+      if (str.charAt(i) === letter) numChars++;
+   }
+   return numChars;
+}
+function countBs(str) {
+   return countChar(str, "B");
+}
+console.log(countBs("BBC"));
+console.log(countChar("kakkerlak", "k"));
+
+</script>
+</html>

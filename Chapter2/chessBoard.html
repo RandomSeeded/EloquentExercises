@@ -1,0 +1,19 @@
+<html>
+<script>
+
+function printChessBoard(size) {
+   var str = "";
+   for (var i = 0; i < size; i++) {
+      var row = "";
+      for (var j = 0; j < size; j++) {
+         if ((i+j) % 2 === 1) row+="#";
+         else row+=" ";
+      }
+      str+=row+"\n";
+   }
+   return str;
+}
+console.log(printChessBoard(5));
+
+</script>
+</html>
