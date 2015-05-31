@@ -56,12 +56,12 @@ function getAgeByCentury(population) {
       console.log("Average age in the "+century+" century: "+average(peopleByCentury[century].map(function(person) { return person.died - person.born; })));
    }
 }
-function groupBy(arr, groupFn) {
+function groupBy(arr, fn) {
    var groupObj = Object.create(null);
    arr.forEach(function(element) {
-      var group = groupFn(element);
-      if (!(group in groupObj)) groupObj[group] = [];
-      groupObj[group].push(element);
+      var groupName = fn(element);
+      if (!(groupName in groupObj)) groupObj[groupName] = [];
+      groupObj[groupName].push(element);
    });
    return groupObj;
 }
